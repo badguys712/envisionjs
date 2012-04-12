@@ -120,7 +120,7 @@ var HumbleFinance = {
      * @param Array volumeData
      * @param Array summaryData
      */
-    init: function(id, , candleData, volumeData, summaryData) {
+    init: function(id, priceData , candleData, volumeData, summaryData) {
 
         // Set members
         this.id = id;
