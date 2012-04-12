@@ -652,7 +652,10 @@ var HumbleFinance = {
 
         p = Flotr.draw(
             $$('#' + this.id + ' #priceGraph')[0],
-            [data],
+            [ 
+                {data: d1, lines:{show: true, fill: true, fillOpacity: .1, lineWidth: -1}},
+                {data: this.candlesData, candles: {show: true, candleWidth: 0.6}},
+            ],
             {
                 lines: {show: true, fill: true, fillOpacity: .1, lineWidth: 1},
                 xaxis: xAxis,
