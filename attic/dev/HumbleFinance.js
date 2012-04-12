@@ -656,6 +656,8 @@ var HumbleFinance = {
             autoscaleMargin : .5, 
             tickDecimals    : 0
         };
+        
+        var d1 = data;
 
         p = Flotr.draw(
             $$('#' + this.id + ' #priceGraph')[0],
