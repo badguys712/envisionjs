@@ -73,6 +73,12 @@ var HumbleFinance = {
      *
      * @member Array
      */
+    candleData: [],
+    /**
+     * Array of data displayed in second graph
+     *
+     * @member Array
+     */
     volumeData: [],
     /**
      * Array of data to serve as a visual summary of the above graphs
@@ -114,17 +120,18 @@ var HumbleFinance = {
      * @param Array volumeData
      * @param Array summaryData
      */
-    init: function(id, priceData, volumeData, summaryData) {
+    init: function(id, , candleData, volumeData, summaryData) {
 
         // Set members
         this.id = id;
         this.priceData = priceData;
+        this.candleData = candleData;
         this.volumeData = volumeData;
         this.summaryData = summaryData;
 
         // Set bounds to scale automatically in the y direction
         this.bounds.xmin = 0;
-        this.bounds.xmax = this.priceData.length - 1;
+        this.bounds.xmax = this.candleData.length - 1;
         this.bounds.ymin = null;
         this.bounds.ymax = null;
 
